@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+html, body, #root { min-height: 100vh; }
+body { font-family: 'Inter', system-ui, sans-serif; background: #f5f7fa; color: #1a2332; -webkit-font-smoothing: antialiased; }
+button, input, textarea, select { font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+img { display: block; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #eef2f7; }
+::-webkit-scrollbar-thumb { background: #1a9bb5; border-radius: 4px; }
+
+/* Animations */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes scaleIn  { from { opacity:0; transform:scale(.96); } to { opacity:1; transform:scale(1); } }
+@keyframes slideRight { from { transform:translateX(-100%); } to { transform:translateX(0); } }
+@keyframes pulse { 0%,100%{transform:scale(1);}50%{transform:scale(1.04);} }
+@keyframes shimmer { 0%{background-position:-400px 0;} 100%{background-position:400px 0;} }
+
+.anim-fadeup  { animation: fadeUp  .65s cubic-bezier(.16,1,.3,1) both; }
+.anim-fadein  { animation: fadeIn  .45s ease both; }
+.anim-scalein { animation: scaleIn .5s cubic-bezier(.16,1,.3,1) both; }
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}.d5{animation-delay:.42s}.d6{animation-delay:.54s}
+
+/* Skeleton loader */
+.skeleton { background: linear-gradient(90deg,#e8edf4 25%,#f4f7fb 50%,#e8edf4 75%); background-size: 400px 100%; animation: shimmer 1.4s infinite; border-radius: 8px; }
